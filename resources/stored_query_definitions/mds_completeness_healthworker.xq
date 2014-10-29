@@ -72,7 +72,7 @@ return
   <tr><th style='width:33%'>Data Field</th><th style='width:33%'>Number of Records<br/>Total of {$total}</th><th style='width:33%'>Percentage</th></tr>
    { 
      for $stat in $stats
-     order by $stat/@count descending
+     order by number($stat/@count) descending
      return $stat
    }
   </table>
