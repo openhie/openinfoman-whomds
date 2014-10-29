@@ -63,16 +63,18 @@ let $stats :=
 	where exists($result)
 	return 	$provider
       let $count:=count($matches)
-      return <tr count="{$count}" xpath="{$xpath}"><td>{$label}</td><td>{$count}</td><td>{if ($total > 0) then floor($count div $total * 100) else "N/A"} %</td></tr>
+      return <record><label>{$label}</label><count>{$count}</count><percent>{if ($total > 0) then floor($count div $total * 100) else "N/A"} %</percent></record>
     })
 
 
-return 
-  <table >
-  <tr><th style='width:33%'>Data Field</th><th style='width:33%'>Number of Records<br/>Total of {$total}</th><th style='width:33%'>Percentage</th></tr>
+let $csv:=
+  <csv >
+  <record><label>Data Field</label><count>Number of Records Total of {$total}</count><percent>Percentage</percent></record>
    { 
      for $stat in $stats
-     order by number($stat/@count) descending
+     order by number($stat/count/text()) descending
      return $stat
    }
-  </table>
+  </csv>
+
+return csv:serialize($csv,{ 'header': 'no', 'separator': 'tab'  })

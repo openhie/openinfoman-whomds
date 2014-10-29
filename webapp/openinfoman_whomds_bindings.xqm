@@ -59,7 +59,6 @@ declare
  
 declare
   %rest:path("/CSD/csr/{$doc_name}/careServicesRequest/{$search_name}/adapter/whomds/completeness")
-  %output:method("xhtml")
   function page:completness($search_name,$doc_name) 
 {
   if (not(page:is_whomds($search_name)) ) 
@@ -75,12 +74,32 @@ declare
        </csd:function>
       </csd:careServicesRequest>
     let $stats := csr_proc:process_CSR_stored_results($csd_webconf:db, $doc,$careServicesRequest)
+    let $output := $function/@content-type
+    let $mime := 
+      if (exists($output))
+      then string($output)
+      else "text/html"
     let $content := 
-      <div>
-	<h4>WHO MDS Completeness Report For {$doc_name}</h4>
-	{$stats}
-      </div>
-    return csd_webconf:wrapper($content)
+      if (not($output = 'text/html'))
+      then $stats
+      else
+        csd_webconf:wrapper(
+	  <div>
+	    <h4>WHO MDS Completeness Report For {$doc_name}</h4>
+	    {$stats}
+	  </div>
+	)
+    return 
+    ( 
+      <rest:response>
+	<http:response status="200" >
+          <http:header name='Content-Type' value="{$mime}"/>
+	</http:response>
+      </rest:response>
+      ,$content
+    )
+
+
 };
 
 

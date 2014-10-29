@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csd:careServicesFunction 
+    xmlns:xforms="http://www.w3.org/2002/xforms" 
+    xmlns:xi="http://www.w3.org/2001/XInclude" 
+    xmlns:csd="urn:ihe:iti:csd:2013" 
+    urn="urn:openhie.org:openinfoman-whomds:stored-function:mds_completeness_healthworker_csv"
+    content-type='text/csv'
+    >
+  <csd:description>Health Worker WHO MDS completeness report as CSV</csd:description>
+  <csd:definition method="csd_hwru:health_worker_indices_service"><xi:include parse="text" href="mds_completeness_healthworker_csv.xq"/></csd:definition>
+  <xforms:instance>
+    <csd:careServicesRequest/>
+  </xforms:instance>
+  <csd:extension type='whomds' urn='urn:openhie.org:openinfoman:adapter'/>
+  <csd:extension type='completeness' urn='urn:openhie.org:openinfoman:adapter:whomds:action'/>
+</csd:careServicesFunction>
