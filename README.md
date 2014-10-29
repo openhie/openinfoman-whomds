@@ -23,10 +23,10 @@ git clone https://github.com/openhie/openinfoman-whomds
 
 Stored Functions
 ----------------
-To install the stored functions (one for each of the FHIR resources) you can do: 
+To install the stored functionsyou can do: 
 <pre>
 cd ~/basex/resources/stored_query_definitions
-ln -sf ~/openinfoman-fhir/resources/stored_query_definitions/* .
+ln -sf ~/openinfoman-whomds/resources/stored_query_definitions/* .
 </pre>
 Be sure to reload the stored functions: 
 > https://github.com/openhie/openinfoman/wiki/Install-Instructions#Loading_Stored_Queries
