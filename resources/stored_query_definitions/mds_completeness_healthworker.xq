@@ -63,7 +63,7 @@ let $stats :=
 	where exists($result)
 	return 	$provider
       let $count:=count($matches)
-      return <tr count="{$count}" xpath="{$xpath}"><td>{$label}</td><td>{$count}</td><td>{$count div $total * 100} %</td></tr>
+      return <tr count="{$count}" xpath="{$xpath}"><td>{$label}</td><td>{$count}</td><td>{floor($count div $total * 100)} %</td></tr>
     })
 
 
