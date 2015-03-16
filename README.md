@@ -4,8 +4,23 @@ openinfoman-whomds
 CSD Stored Functions related to WHO Minimum Data Set for Health Workers
 
 
-Prerequisites
-=============
+
+Ubuntu Installation
+===================
+You can easily install on Ubuntu 14.04 and Ubuntu 14.10 using the following commands
+<pre>
+sudo add-apt-repository ppa:openhie/release
+sudo apt-get update
+sudo apt-get install openinfoman-whomds
+</pre>
+
+Once installed, you should be able to access OpenInfoMan at:
+> http://localhost:8984/CSD
+
+
+
+Manual Installation
+==================
 
 Assumes that you have installed BaseX and OpenInfoMan according to:
 > https://github.com/openhie/openinfoman/wiki/Install-Instructions
