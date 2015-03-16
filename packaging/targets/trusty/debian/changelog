@@ -1,3 +1,11 @@
+openinfoman-whomds (1.0.1~trusty) trusty; urgency=medium
+
+  * Release Version 1.0.1
+    -41cd233 initial pacakging
+    --https://github.com/openhie/openinfoman-whomds/commmit/41cd233
+
+ -- Carl Leitner <litlfred@ibiblio.org>  Mon, 16 Mar 2015 15:53:03 +0000
+
 openinfoman-whomds (1.0.0~trusty) trusty; urgency=low
 
   [Carl Leitner <litlfred@ibiblio.org>]
