@@ -77,4 +77,4 @@ let $csv:=
    }
   </csv>
 
-return csv:serialize($csv,{ 'header': 'no', 'separator': 'tab'  })
+return csv:serialize($csv,map{ 'header': 'no', 'separator': 'tab'  })
