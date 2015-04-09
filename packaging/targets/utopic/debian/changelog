@@ -1,3 +1,15 @@
+openinfoman-whomds (1.0.3~utopic) utopic; urgency=medium
+
+  * Release Version 1.0.3
+    -c23df70 updated map{} to new usage
+    --https://github.com/openhie/openinfoman-whomds/commmit/c23df70
+    -40fb6b0 updated ignore
+    --https://github.com/openhie/openinfoman-whomds/commmit/40fb6b0
+    -7b1b008 Update README.md
+    --https://github.com/openhie/openinfoman-whomds/commmit/7b1b008
+
+ -- Carl Leitner <litlfred@ibiblio.org>  Thu, 09 Apr 2015 11:16:15 -0400
+
 openinfoman-whomds (1.0.2~utopic) utopic; urgency=medium
 
   * Release Version 1.0.2
