@@ -93,6 +93,12 @@ The representation/mapping of the WHO MDS onto CSD is in the following table:
   <td height=16 class=xl69 width=138 style='height:16.0pt;width:138pt'><span>Longitude</span></td>
   <td class=xl69 width=503 style='width:503pt'><span>geocode/longitude</span></td>
  </tr>
+</table>
+<table border=0 cellpadding=0 cellspacing=0 width=773 style='border-collapse:
+ collapse;table-layout:fixed;width:773pt'>
+ <col width=132 style='mso-width-source:userset;mso-width-alt:5632;width:132pt'>
+ <col width=138 style='mso-width-source:userset;mso-width-alt:5888;width:138pt'>
+ <col width=503 style='mso-width-source:userset;mso-width-alt:21461;width:503pt'>
  <tr height=15 style='height:15.0pt'>
   <td rowspan=2 height=31 class=xl83 width=132 style='border-bottom:1.0pt solid black;
   height:31.0pt;border-top:none;width:132pt'><span>Helath Worker Data Set</span></td>
