@@ -1,7 +1,14 @@
 openinfoman-whomds
 ==================
 
-CSD Stored Functions related to WHO Minimum Data Set for Health Workers
+CSD Stored Functions related to WHO Minimum Data Set (MDS) for Health Worker Registries.
+
+<ul>
+<li>The WHO MDS data dictionary can be found <a href="http://www.who.int/hrh/statistics/minimun_data_set/en/">here</a></li>
+<li>The representation/mapping of the WHO MDS onto CSD can be found <a href="https://github.com/openhie/openinfoman-whomds/tree/master/resources/WHO_CSD_mapping.html">here</a></li>
+</ul>
+
+
 
 
 
