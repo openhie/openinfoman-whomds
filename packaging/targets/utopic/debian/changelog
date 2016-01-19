@@ -1,3 +1,23 @@
+openinfoman-whomds (1.0.4~utopic) utopic; urgency=medium
+
+  * Release Version 1.0.4
+    -1f8aa1d webui API updates
+    --http://github.com/openhie/openinfoman-whomds/commmit/1f8aa1d
+    -1beda39  Please enter the commit message for your changes. Lines s
+    --http://github.com/openhie/openinfoman-whomds/commmit/1beda39
+    -81efde9 deleted file
+    --http://github.com/openhie/openinfoman-whomds/commmit/81efde9
+    -b4bf665 doc updatE
+    --http://github.com/openhie/openinfoman-whomds/commmit/b4bf665
+    -0938ea8 updated doc
+    --http://github.com/openhie/openinfoman-whomds/commmit/0938ea8
+    -c0bbc56 MDS CSD mapping update
+    --http://github.com/openhie/openinfoman-whomds/commmit/c0bbc56
+    -52edd26 Added CSD-MDS mapping info
+    --http://github.com/openhie/openinfoman-whomds/commmit/52edd26
+
+ -- Carl Leitner <litlfred@ibiblio.org>  Mon, 18 Jan 2016 22:41:18 -0500
+
 openinfoman-whomds (1.0.3~utopic) utopic; urgency=medium
 
   * Release Version 1.0.3
