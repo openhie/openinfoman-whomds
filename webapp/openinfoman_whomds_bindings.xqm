@@ -46,7 +46,7 @@ declare
 	   <span>
              <h3>Completeness Report</h3>
 	     {
-	       let $url := concat(csd_webui:generateURL( "CSD/csr/" , $doc_name , "/careServicesRequest/",$search_name, "/adapter/whomds/completeness"))
+	       let $url := csd_webui:generateURL( ("CSD/csr/" , $doc_name , "/careServicesRequest/",$search_name, "/adapter/whomds/completeness"))
 	       return <p>Get the  <a href="{$url}">Completness Report</a></p>
 	     }
 	   </span>
