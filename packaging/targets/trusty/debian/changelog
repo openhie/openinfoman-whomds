@@ -1,3 +1,11 @@
+openinfoman-whomds (1.1.3~trusty) trusty; urgency=medium
+
+  * Release Version 1.1.3
+    -bdb95c5 updating bindings
+    --https://github.com/openhie/openinfoman-whomds/commmit/bdb95c5
+
+ -- Carl Leitner <litlfred@ibiblio.org>  Sat, 05 Mar 2016 14:56:21 +0000
+
 openinfoman-whomds (1.1.2~trusty) trusty; urgency=medium
 
   * Release Version 1.1.2
