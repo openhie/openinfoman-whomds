@@ -9,7 +9,7 @@ Homepage: https://github.com/openhie/openinfoman-whomds
 
 Package: openinfoman-whomds
 Architecture: all
-Depends: openinfoman (>= 1.0.11)
+Depends: openinfoman (>= 1.1)
 Recommends: 
 Description: OpenInfoMan WHO Minimum Data Set(MDS) Library
  Library of stored functions for OpenInfoMan specific to WHO Minimum Data Set(MDS)

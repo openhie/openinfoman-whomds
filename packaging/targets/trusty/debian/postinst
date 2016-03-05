@@ -1,0 +1,30 @@
+#!/bin/bash
+set -x
+
+
+
+OI=/var/lib/openinfoman
+USERNAME=oi
+BASEX=$OI/bin/basex
+
+
+REPOS=()
+SFS=("stored_query_definitions/mds_completeness_healthworker.xml" "stored_query_definitions/mds_completeness_healthworker_csv.xml")
+
+for REPO in ${REPOS[@]}
+do
+   INST="REPO INSTALL ${OI}/repo-src/${REPO}"
+   $BASEX -Vc "${INST}"
+done
+
+for SF in ${SFS[@]}
+do
+  cd $OI
+  $OI/resources/scripts/install_stored_function.php $OI/resources/$SF 
+  if [[ $? != 0 ]]; then exit 1; fi
+done
+
+
+chown -R $USERNAME:$USERNAME $OI
+
+
