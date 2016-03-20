@@ -67,13 +67,10 @@ declare
     let $doc :=  csd_dm:open_document($csd_webconf:db,$doc_name)
     let $function := csr_proc:get_function_definition($csd_webconf:db,$search_name)
 
-    let $careServicesRequest := 
-      <csd:careServicesRequest>
-       <csd:function urn="{$search_name}" resource="{$doc_name}" base_url="{$csd_webconf:baseurl}">
-         <csd:requestParams/>
-       </csd:function>
-      </csd:careServicesRequest>
-    let $stats := csr_proc:process_CSR_stored_results($csd_webconf:db, $doc,$careServicesRequest)
+    let $requestParams := 
+      <csd:requestParams function="{$search_name}" resource="{$doc_name}" base_url="{$csd_webconf:baseurl}"/>
+
+    let $stats := csr_proc:process_CSR_stored_results($csd_webconf:db, $doc,$requestParams)
     let $output := $function/@content-type
     let $mime := 
       if (exists($output))
