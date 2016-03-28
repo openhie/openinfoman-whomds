@@ -1,7 +1,6 @@
 module namespace page = 'http://basex.org/modules/web-page';
 
 (:Import other namespaces.  :)
-import module namespace csd_webconf =  "https://github.com/openhie/openinfoman/csd_webconf";
 import module namespace csd_webui =  "https://github.com/openhie/openinfoman/csd_webui";
 import module namespace csr_proc = "https://github.com/openhie/openinfoman/csr_proc";
 import module namespace csd_dm = "https://github.com/openhie/openinfoman/csd_dm";
@@ -11,14 +10,14 @@ declare namespace csd = "urn:ihe:iti:csd:2013";
 
 
 declare function page:is_whomds($search_name) {
-  let $function := csr_proc:get_function_definition($csd_webconf:db,$search_name)
+  let $function := csr_proc:get_function_definition($search_name)
   let $ext := $function//csd:extension[  @urn='urn:openhie.org:openinfoman:adapter' and @type='whomds']
   return (count($ext) > 0) 
 };
 
 
 declare function page:get_actions($search_name) {
-  let $function := csr_proc:get_function_definition($csd_webconf:db,$search_name)
+  let $function := csr_proc:get_function_definition($search_name)
   return 
     (
     for $act in $function//csd:extension[  @urn='urn:openhie.org:openinfoman:adapter:whomds:action']/@type
@@ -65,8 +64,8 @@ declare
   if (not(page:is_whomds($search_name)) ) 
     then ('Not a WHO MDS Compatible stored function'    )
   else 
-    let $doc :=  csd_dm:open_document($csd_webconf:db,$doc_name)
-    let $function := csr_proc:get_function_definition($csd_webconf:db,$search_name)
+    let $doc :=  csd_dm:open_document($doc_name)
+    let $function := csr_proc:get_function_definition($search_name)
 
     let $careServicesRequest := 
       <csd:careServicesRequest>
@@ -74,7 +73,7 @@ declare
          <csd:requestParams/>
        </csd:function>
       </csd:careServicesRequest>
-    let $stats := csr_proc:process_CSR_stored_results($csd_webconf:db, $doc,$careServicesRequest)
+    let $stats := csr_proc:process_CSR_stored_results( $doc,$careServicesRequest)
     let $output := $function/@content-type
     let $mime := 
       if (exists($output))
