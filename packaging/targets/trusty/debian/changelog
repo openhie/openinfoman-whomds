@@ -1,3 +1,11 @@
+openinfoman-whomds (1.2.2~trusty) trusty; urgency=medium
+
+  * Release Version 1.2.2
+    -aa8c035 fixup csd_webconf references
+    --http://github.com/openhie/openinfoman-whomds/commmit/aa8c035
+
+ -- Carl Leitner <litlfred@ibiblio.org>  Mon, 28 Mar 2016 02:05:49 +0000
+
 openinfoman-whomds (1.2.1~trusty) trusty; urgency=medium
 
   * Release Version 1.2.1
