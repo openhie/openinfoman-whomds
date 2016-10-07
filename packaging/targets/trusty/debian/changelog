@@ -1,3 +1,9 @@
+openinfoman-whomds (1.2.3~trusty) trusty; urgency=medium
+
+  * Release Version 1.2.3
+
+ -- Carl Leitner <litlfred@ibiblio.org>  Fri, 07 Oct 2016 18:17:00 +0300
+
 openinfoman-whomds (1.2.2~trusty) trusty; urgency=medium
 
   * Release Version 1.2.2
