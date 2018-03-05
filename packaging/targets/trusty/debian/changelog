@@ -1,3 +1,11 @@
+openinfoman-whomds (1.2.4~trusty) trusty; urgency=medium
+
+  * Release Version 1.2.4
+    -4fbe892 Packaging to 16.04
+    --https://github.com/openhie/openinfoman-whomds/commmit/4fbe892
+
+ -- Carl Leitner <litlfred@ibiblio.org>  Mon, 05 Mar 2018 21:04:07 +0300
+
 openinfoman-whomds (1.2.3~trusty) trusty; urgency=medium
 
   * Release Version 1.2.3
