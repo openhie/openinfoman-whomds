@@ -1,3 +1,11 @@
+openinfoman-whomds (1.2.5~xenial) xenial; urgency=medium
+
+  * Release Version 1.2.5
+    -471e244 adding compat file for packaging
+    --https://github.com/openhie/openinfoman-whomds/commmit/471e244
+
+ -- Carl Leitner <litlfred@ibiblio.org>  Sat, 14 Apr 2018 08:07:14 +0000
+
 openinfoman-whomds (1.2.4~xenial) xenial; urgency=medium
 
   * Release Version 1.2.4
